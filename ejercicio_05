@@ -1,0 +1,39 @@
+package Interfaces;
+
+public class Main {
+    public static void main(String[] args) {
+        CocheCRUD cocheCrud = new CocheCRUDImpl();
+        CocheCRUD.save();
+         System.out.println(CocheCRUD.save());
+        CocheCRUD.save();
+         System.out.println(CocheCRUD.findAll());
+        CocheCRUD.save();
+         System.out.println(CocheCRUD.delete());
+    }
+}
+
+
+public interface CocheCRUD {
+
+    static String findAll() {
+        return "findAll";
+    }
+
+    static String delete() {
+        return "delete";
+    }
+
+    static String save() {
+        return "save";
+    }
+
+}
+
+
+public class CocheCRUDImpl implements CocheCRUD {
+
+
+}
+
+
+
